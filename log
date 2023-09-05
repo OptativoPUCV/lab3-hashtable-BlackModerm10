@@ -172,3 +172,14 @@ Tue 05 Sep 2023 11:17:09 PM UTC:
  tests:  5|4
 total_score: 30/70
 b7385ec
+Tue 05 Sep 2023 11:52:12 PM UTC: 
+ hashmap.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:87:1: error: control reaches end of non-void function [-Werror=return-type]
+   87 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+9134a80
