@@ -52,31 +52,8 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-    // Verificar que la capacidad sea válida
-    if (capacity <= 0) {
-        return NULL;
-    }
 
-    // Crear el mapa
-    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
-    if (map == NULL) {
-        return NULL; // No se pudo asignar memoria para el mapa
-    }
-
-    // Inicializar el arreglo de buckets con casillas nulas
-    map->buckets = (Bucket **)calloc(capacity, sizeof(Bucket *));
-    if (map->buckets == NULL) {
-        free(map); // Liberar la memoria del mapa si falla la asignación de buckets
-        return NULL;
-    }
-
-    // Inicializar el resto de variables
-    map->size = 0;
-    map->capacity = capacity;
-    map->current = -1;
-
-    return map;
-}
+    return NULL;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
