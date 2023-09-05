@@ -46,3 +46,21 @@ hashmap.c:61:12: error: ‘HashMap’ {aka ‘struct HashMap’} has no member n
       |            ^~
 Compilation failed
 be4b7a2
+Tue 05 Sep 2023 06:40:12 PM UTC: 
+ hashmap.c | 22 ++++++++++++----------
+ 1 file changed, 12 insertions(+), 10 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:67:21: error: ‘Bucket’ undeclared (first use in this function)
+   67 |     map->buckets = (Bucket **)calloc(capacity, sizeof(Bucket *));
+      |                     ^~~~~~
+hashmap.c:67:21: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:67:30: error: expected expression before ‘)’ token
+   67 |     map->buckets = (Bucket **)calloc(capacity, sizeof(Bucket *));
+      |                              ^
+hashmap.c:72:1: error: control reaches end of non-void function [-Werror=return-type]
+   72 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+d200c08
