@@ -45,6 +45,8 @@ void insertMap(HashMap * map, char * key, void * value) {
     if (is_equal(map->buckets[position]->key, key)) {
     return;
     }
+    position = (position + 1) % map->capacity;
+  }  
 }
 
 void enlarge(HashMap * map) {
