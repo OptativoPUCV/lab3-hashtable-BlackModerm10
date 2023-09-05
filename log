@@ -26,3 +26,23 @@ hashmap.c:65:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 09c7f00
+Tue 05 Sep 2023 06:37:51 PM UTC: 
+ hashmap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:60:8: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘entries’
+   60 |     map->entries = (Entry *)malloc(capacity * sizeof(Entry));
+      |        ^~
+hashmap.c:60:21: error: ‘Entry’ undeclared (first use in this function)
+   60 |     map->entries = (Entry *)malloc(capacity * sizeof(Entry));
+      |                     ^~~~~
+hashmap.c:60:21: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:60:28: error: expected expression before ‘)’ token
+   60 |     map->entries = (Entry *)malloc(capacity * sizeof(Entry));
+      |                            ^
+hashmap.c:61:12: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘entries’
+   61 |     if (map->entries == NULL) {
+      |            ^~
+Compilation failed
+be4b7a2

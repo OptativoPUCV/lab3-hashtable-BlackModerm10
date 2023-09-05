@@ -62,6 +62,11 @@ HashMap * createMap(long capacity) {
         free(map);
         return NULL; // Error al asignar memoria para las entradas
     }
+
+    map->capacity = capacity;
+    map->size = 0;
+
+    return map;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
