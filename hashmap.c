@@ -83,8 +83,8 @@ long position = hash(key, map->capacity);
         }
         position = (position + 1) % map->capacity; // Resolución de colisiones
     }
-    
-
+    return NULL;
+}
 
 Pair * firstMap(HashMap * map) {
 
