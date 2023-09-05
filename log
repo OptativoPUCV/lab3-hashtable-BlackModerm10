@@ -166,3 +166,9 @@ hashmap.c:50:39: note: previous implicit declaration of ‘_strdup’ with type 
 cc1: all warnings being treated as errors
 Compilation failed
 39a4528
+Tue 05 Sep 2023 11:17:09 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 30/70
+b7385ec

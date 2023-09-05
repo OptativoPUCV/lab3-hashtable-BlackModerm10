@@ -47,7 +47,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     }
     position = (position + 1) % map->capacity;
   }  
-  map->buckets[position] = createPair(_strdup(key), value);
+  map->buckets[position] = createPair(strdup(key), value);
   map->size++;
   map->current = position;
 }
