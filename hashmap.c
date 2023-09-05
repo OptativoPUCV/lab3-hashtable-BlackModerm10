@@ -52,8 +52,16 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
+    HashMap *map = (HashMap *)malloc(sizeof(HashMap));
+    if (map == NULL) {
+        return NULL; // Error al asignar memoria para el mapa
+    }
 
-    return NULL;
+    map->entries = (Entry *)malloc(capacity * sizeof(Entry));
+    if (map->entries == NULL) {
+        free(map);
+        return NULL; // Error al asignar memoria para las entradas
+    }
 }
 
 void eraseMap(HashMap * map,  char * key) {    
