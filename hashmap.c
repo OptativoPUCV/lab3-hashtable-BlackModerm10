@@ -69,6 +69,14 @@ HashMap * createMap(long capacity) {
         free(map); // Liberar la memoria del mapa si falla la asignación de buckets
         return NULL;
     }
+
+    // Inicializar el resto de variables
+    map->size = 0;
+    map->capacity = capacity;
+    map->current = -1;
+
+    return map;
+}
 }
 
 void eraseMap(HashMap * map,  char * key) {    

@@ -64,3 +64,21 @@ hashmap.c:72:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 d200c08
+Tue 05 Sep 2023 06:40:52 PM UTC: 
+ hashmap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:67:21: error: ‘Bucket’ undeclared (first use in this function)
+   67 |     map->buckets = (Bucket **)calloc(capacity, sizeof(Bucket *));
+      |                     ^~~~~~
+hashmap.c:67:21: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:67:30: error: expected expression before ‘)’ token
+   67 |     map->buckets = (Bucket **)calloc(capacity, sizeof(Bucket *));
+      |                              ^
+hashmap.c: At top level:
+hashmap.c:80:1: error: expected identifier or ‘(’ before ‘}’ token
+   80 | }
+      | ^
+Compilation failed
+67df9ff
