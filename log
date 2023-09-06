@@ -257,3 +257,14 @@ Wed 06 Sep 2023 02:21:57 AM UTC:
  tests:  13|2
 total_score: 50/70
 533364b
+Wed 06 Sep 2023 02:32:28 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:72:10: error: unused variable ‘pair’ [-Werror=unused-variable]
+   72 |   Pair * pair = searchMap(map, key);
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b5b967e
